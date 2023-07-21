@@ -6,13 +6,19 @@ int main(int ac, char **argv)
 	char *linepointer = NULL; // store buffer address
 	size_t n = 0;
 
-	(void)ac; (void)argv;
+	(void)ac;
+	(void)argv;
 
-	printf("%s", prompt);
-	getline(&linepointer, &n, stdin);
+	/* create an infinitre loop*/
+	for (;;)
+	{
+		printf("%s", prompt);
+		getline(&linepointer, &n, stdin);
 
-	printf("%s\n", linepointer);
+		printf("%s\n", linepointer);
 
-	free(linepointer);
+		/*fre up allocate memory */
+		free(linepointer);
+	}
 	return (0);
 }
