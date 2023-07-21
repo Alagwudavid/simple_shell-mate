@@ -9,16 +9,16 @@ int main(int ac, char **argv)
 	(void)ac;
 	(void)argv;
 
-	/* create an infinitre loop*/
+	/* create an infinite loop*/
 	for (;;)
 	{
 		printf("%s", prompt);
 		getline(&linepointer, &n, stdin);
 
 		printf("%s\n", linepointer);
-
-		/*fre up allocate memory */
-		free(linepointer);
 	}
+
+	/*free up allocate memory */
+	free(linepointer);
 	return (0);
 }
