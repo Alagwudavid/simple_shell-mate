@@ -9,6 +9,8 @@ int main(int ac, char **argv)
 	printf("%s", prompt);
 	getline(&linepointer, &n, stdin);
 
+	printf("%s\n", linepointer);
+
 	free(linepointer);
 	return (0);
 }
